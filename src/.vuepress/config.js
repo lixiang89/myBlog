@@ -1,6 +1,7 @@
 module.exports = {
     base: '/myBlog/',
     title: '伊水河的博客',
+    dest: './docs',
     description: '随便记录点什么',
     locales: {
         '/':{

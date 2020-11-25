@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>实现一个antd表头排序功能 | 伊水河的博客</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="随便记录点什么">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/myBlog/assets/css/0.styles.7822173b.css" as="style"><link rel="preload" href="/myBlog/assets/js/app.fb34b623.js" as="script"><link rel="preload" href="/myBlog/assets/js/3.988573a9.js" as="script"><link rel="preload" href="/myBlog/assets/js/1.01ae2e05.js" as="script"><link rel="preload" href="/myBlog/assets/js/10.57fb292e.js" as="script"><link rel="prefetch" href="/myBlog/assets/js/11.7ff24cd0.js"><link rel="prefetch" href="/myBlog/assets/js/12.3fb24736.js"><link rel="prefetch" href="/myBlog/assets/js/13.37712bd4.js"><link rel="prefetch" href="/myBlog/assets/js/14.036427f4.js"><link rel="prefetch" href="/myBlog/assets/js/4.5a4aa720.js"><link rel="prefetch" href="/myBlog/assets/js/5.fdb2463d.js"><link rel="prefetch" href="/myBlog/assets/js/6.182b2d4f.js"><link rel="prefetch" href="/myBlog/assets/js/7.8c4ca7f8.js"><link rel="prefetch" href="/myBlog/assets/js/8.97eb7664.js"><link rel="prefetch" href="/myBlog/assets/js/9.5937fc41.js">
+    <link rel="stylesheet" href="/myBlog/assets/css/0.styles.7822173b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-2d5f533b><div data-v-2d5f533b><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-2d5f533b data-v-2d5f533b><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-2d5f533b data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>伊水河的博客</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>伊水河</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div class="hide" data-v-2d5f533b><header class="navbar" data-v-2d5f533b><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myBlog/" class="home-link router-link-active"><!----> <span class="site-name">伊水河的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myBlog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/myBlog/categories/前端/" class="nav-link"><i class="iconfont reco-api"></i>
+  前端
+</a></div><div class="nav-item"><a href="/myBlog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-2d5f533b></div> <aside class="sidebar" data-v-2d5f533b><div class="personal-info-wrapper" data-v-ca798c94 data-v-2d5f533b><img src="/myBlog/b.jpg" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    伊水河
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>4</h3> <h6 data-v-ca798c94>文章</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>6</h3> <h6 data-v-ca798c94>标签</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/myBlog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/myBlog/categories/前端/" class="nav-link"><i class="iconfont reco-api"></i>
+  前端
+</a></div><div class="nav-item"><a href="/myBlog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>实现一个antd表头排序功能</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>伊水河</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div data-v-2d5f533b><main class="page"><div class="page-title" style="display:none;"><h1 class="title">实现一个antd表头排序功能</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>伊水河</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2020-10-23</span></i> <!----> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>antd</span><span class="tag-item" data-v-3b7f5bdf>组件</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>近日在使用antd的table组件时，发现使用的版本——3.10.0的排序功能，存在一定的问题。</p> <blockquote><p>官方已在后续版本修复。</p> <ul><li>修复未指定排序的列头点击时也会触发排序的问题。<a href="https://github.com/ant-design/ant-design/issues/12515" target="_blank" rel="noopener noreferrer">#12515<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></blockquote> <p>但因种种原因只能自行解决，查阅文档后发现使用版本的<code>title</code>支持函数自定义，让自定义排序成为可能。同时满足需求提出的点击icon排序、icon以外恢复默认的功能。</p> <h2 id="分析需求"><a href="#分析需求" class="header-anchor">#</a> 分析需求</h2> <p>首先，分析需求：</p> <ul><li>在columns里添加字段<code>sort</code>来标识需要进行排序的列</li> <li>定义<code>onSortChange</code>函数来处理排序变化</li> <li>含有<code>sort</code>字段的列通过<code>title</code>的函数处理方式替换为自定义排序组件</li> <li>columns里的<code>title</code>直接传入自定义排序组件</li> <li>考虑清空排序的场景，如带搜索功能的table，请求参数变化。</li></ul> <h3 id="封装table组件"><a href="#封装table组件" class="header-anchor">#</a> 封装table组件</h3> <p>先来实现上面的需求，处理table，新建<code>tableComp</code>文件:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useMemo <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Table <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'antd'</span><span class="token punctuation">;</span>
+<span class="token comment">//自定义排序组件</span>
+<span class="token keyword">import</span> Sorter <span class="token keyword">from</span> <span class="token string">'./sorter'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    columns<span class="token punctuation">,</span>
+    sortClear<span class="token punctuation">,</span>
+    <span class="token function-variable function">onSortChange</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>tableProps
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    
+    <span class="token comment">// 处理父组件传入的columns的sort</span>
+    <span class="token keyword">const</span> cols<span class="token operator">=</span><span class="token function">useMemo</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> columns<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">col</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>col<span class="token punctuation">.</span>sort<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">const</span> <span class="token punctuation">{</span>
+                    title<span class="token punctuation">,</span>
+                    sort<span class="token punctuation">,</span>
+                    <span class="token operator">...</span>colProps
+                <span class="token punctuation">}</span><span class="token operator">=</span>col
+
+                col<span class="token operator">=</span><span class="token punctuation">{</span>
+                    <span class="token operator">...</span>colProps<span class="token punctuation">,</span>
+                    <span class="token function-variable function">title</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">(</span>
+                        <span class="token operator">&lt;</span>Sorter
+                            title<span class="token operator">=</span><span class="token punctuation">{</span>title<span class="token punctuation">}</span>
+                            field<span class="token operator">=</span><span class="token punctuation">{</span>colProps<span class="token punctuation">.</span>dataIndex<span class="token punctuation">}</span>
+                            onChange<span class="token operator">=</span><span class="token punctuation">{</span>onSortChange<span class="token punctuation">}</span>
+                            clear<span class="token operator">=</span><span class="token punctuation">{</span>sortClear<span class="token punctuation">}</span> 
+                        <span class="token operator">/</span><span class="token operator">&gt;</span>
+                    <span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> col
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">[</span>columns<span class="token punctuation">,</span>sortClear<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>Table 
+            columns<span class="token operator">=</span><span class="token punctuation">{</span>cols<span class="token punctuation">}</span><span class="token comment">//使用处理过的columns来展示</span>
+            <span class="token punctuation">{</span><span class="token operator">...</span>tableProps<span class="token punctuation">}</span>
+            pagination<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">false</span><span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="自定义排序组件sorter"><a href="#自定义排序组件sorter" class="header-anchor">#</a> 自定义排序组件<code>Sorter</code></h3> <p>功能分析：</p> <ul><li>需两个icon，直接使用antd的<code>Icon</code></li> <li>点击相应icon，触发<code>onChange</code>事件，并传入<code>{field:'排序的字段',order:'正序——ascend、倒序——descend、默认'}</code></li> <li>需考虑清空排序的功能</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span>useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Icon<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'antd'</span>
+
+<span class="token keyword">import</span> <span class="token string">'./sorter.css'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    title<span class="token punctuation">,</span>
+    field<span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    clear
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>order<span class="token punctuation">,</span>setOrder<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment">//这里使用在多个元素上使用onClick并阻止冒泡的方式，也可以用一个事件然后判断触发的dom元素来处理</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">handleSortClick</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token parameter">ord<span class="token punctuation">,</span>e</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        e<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>order<span class="token operator">!==</span>ord<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">setOrder</span><span class="token punctuation">(</span>ord<span class="token punctuation">)</span>
+            <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token punctuation">{</span>field<span class="token punctuation">,</span>order<span class="token operator">:</span>ord<span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>clear<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">setOrder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">[</span>clear<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 最外面的click用于取消排序</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>div
+            className<span class="token operator">=</span><span class="token string">&quot;sorter&quot;</span>
+            onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">handleSortClick</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;sorter_title&quot;</span><span class="token operator">&gt;</span>
+                <span class="token punctuation">{</span><span class="token keyword">typeof</span> title<span class="token operator">===</span><span class="token string">'function'</span><span class="token operator">?</span><span class="token function">title</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span>title<span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;sorter_icon&quot;</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>Icon 
+                    className<span class="token operator">=</span><span class="token punctuation">{</span>order<span class="token operator">===</span><span class="token string">'ascend'</span><span class="token operator">&amp;&amp;</span><span class="token string">'active'</span><span class="token punctuation">}</span>
+                    type<span class="token operator">=</span><span class="token string">&quot;caret-up&quot;</span>
+                    onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">handleSortClick</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token string">'ascend'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+                <span class="token operator">/</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>Icon 
+                    className<span class="token operator">=</span><span class="token punctuation">{</span>order<span class="token operator">===</span><span class="token string">'descend'</span><span class="token operator">&amp;&amp;</span><span class="token string">'active'</span><span class="token punctuation">}</span>
+                    type<span class="token operator">=</span><span class="token string">&quot;caret-down&quot;</span>
+                    onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">handleSortClick</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token string">'descend'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+                <span class="token operator">/</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>样式修饰：</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.sorter</span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.sorter_title</span><span class="token punctuation">{</span>
+    <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.sorter_icon</span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #dfdfdf<span class="token punctuation">;</span>
+    <span class="token property">max-width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">min-width</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+    <span class="token property">margin-left</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.anticon</span><span class="token punctuation">{</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> 0.3s<span class="token punctuation">;</span>
+    <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.anticon.active</span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #000ab2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>到这里，功能基本已经实现了，但需求是单列排序。</p> <h3 id="单列排序"><a href="#单列排序" class="header-anchor">#</a> 单列排序</h3> <p>那么在进行排序列切换的时候，就要清空其他列的排序效果：</p> <ul><li>在table中记录当前的排序列<code>sortField</code></li> <li>只在列名与<code>sortField</code>相同的排序组件里展示排序效果</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    columns<span class="token punctuation">,</span>
+    sortClear<span class="token punctuation">,</span>
+    <span class="token function-variable function">onSortChange</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>tableProps
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">// 排序列</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>sortField<span class="token punctuation">,</span>setSortField<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    <span class="token comment">// 取出change函数记录当前排序列</span>
+    <span class="token keyword">const</span> handleSortChange<span class="token operator">=</span><span class="token function">useCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">sortData<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token function">setSortField</span><span class="token punctuation">(</span>sortData<span class="token punctuation">.</span>field<span class="token punctuation">)</span>
+        <span class="token function">onSortChange</span><span class="token punctuation">(</span>sortData<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">[</span>onSortChange<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">const</span> cols<span class="token operator">=</span><span class="token function">useMemo</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> columns<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">col</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>col<span class="token punctuation">.</span>sort<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">const</span> <span class="token punctuation">{</span>
+                    title<span class="token punctuation">,</span>
+                    sort<span class="token punctuation">,</span>
+                    <span class="token operator">...</span>colProps
+                <span class="token punctuation">}</span><span class="token operator">=</span>col
+
+                col<span class="token operator">=</span><span class="token punctuation">{</span>
+                    <span class="token operator">...</span>colProps<span class="token punctuation">,</span>
+                    <span class="token function-variable function">title</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">(</span>
+                        <span class="token operator">&lt;</span>Sorter
+                            title<span class="token operator">=</span><span class="token punctuation">{</span>title<span class="token punctuation">}</span>
+                            field<span class="token operator">=</span><span class="token punctuation">{</span>colProps<span class="token punctuation">.</span>dataIndex<span class="token punctuation">}</span>
+                            onChange<span class="token operator">=</span><span class="token punctuation">{</span>handleSortChange<span class="token punctuation">}</span>
+                            <span class="token comment">// 与当前列不同时清除</span>
+                            clear<span class="token operator">=</span><span class="token punctuation">{</span>sortClear <span class="token operator">||</span> sortField<span class="token operator">!==</span>colProps<span class="token punctuation">.</span>dataIndex<span class="token punctuation">}</span> 
+                        <span class="token operator">/</span><span class="token operator">&gt;</span>
+                    <span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> col
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">[</span>columns<span class="token punctuation">,</span> handleSortChange<span class="token punctuation">,</span> sortClear<span class="token punctuation">,</span> sortField<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>Table 
+            columns<span class="token operator">=</span><span class="token punctuation">{</span>cols<span class="token punctuation">}</span>
+            <span class="token punctuation">{</span><span class="token operator">...</span>tableProps<span class="token punctuation">}</span>
+            pagination<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">false</span><span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>至此，已完成需求提出的各项问题。</p> <h3 id="效果"><a href="#效果" class="header-anchor">#</a> 效果</h3> <p>最后，看一下效果</p> <p><img src="/myBlog/images/antdTableTitleSort/show.gif" alt="自定义排序效果"></p></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/myBlog/assets/js/app.fb34b623.js" defer></script><script src="/myBlog/assets/js/3.988573a9.js" defer></script><script src="/myBlog/assets/js/1.01ae2e05.js" defer></script><script src="/myBlog/assets/js/10.57fb292e.js" defer></script>
+  </body>
+</html>
