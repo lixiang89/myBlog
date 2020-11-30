@@ -4,12 +4,16 @@ html.dark{
         background-color: #282c34;
     }
 }
-h3::before{
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        display: block;
-        height: 1.5rem;
-        content: '';
-        border-left: 3px solid rgb(132,155,135);
+.page h3{
+    position relative
+    padding-left: 0.5em
+    &::before{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            height: 1.3rem;
+            content: '';
+            border-left: 3px solid rgb(132,155,135);
+    }
 }

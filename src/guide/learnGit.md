@@ -1,10 +1,10 @@
 ---
 title: git入门学习
-date: 2020-11-30
-categories:
- - 前端
-tags:
- - git
+# date: 2020-11-30
+# categories:
+#  - 前端
+# tags:
+#  - git
 publish: false
 ---
 
@@ -12,6 +12,7 @@ publish: false
 
 ## 基础概念
 ## git init
+## git add
 ## git commit
 ## git reset
 ## git revert
