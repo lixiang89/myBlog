@@ -20,7 +20,16 @@ module.exports = {
         ['link', { rel: 'icon', href: '/logo.png' }]
     ],
     themeConfig: {
-        // sidebar: 'auto',
+        sidebar: {
+            '/note/professionalJavascript4/':[
+                '2',
+                '3',
+                '4',
+                '5',
+                '6',
+                '7',
+            ],
+        },
         sidebarDepth: 2,
         type: 'blog',
         subSidebar: 'auto',
@@ -29,14 +38,14 @@ module.exports = {
             { 
                 text: '切换', 
                 icon: 'reco-blog',
-                ariaLabel: 'Language Menu',
                 items: [
                     { text: '码云', link: 'https://yishuihe.gitee.io/myblog', target:'_self', icon: 'reco-mayun' },
                     { text: 'github', link: 'https://lixiang89.github.io/myBlog/', target:'_self', icon: 'reco-github' },
                 ] 
             },
-            { text: '前端', link: '/categories/前端/', icon: 'reco-api' },
-            { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
+            { text: '前端', link: '/categories/前端/', icon: 'reco-blog' },
+            { text: '笔记', link: '/note/', icon: 'reco-suggestion' },
+            // { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
             { text: 'TODO', link: '/todo/', icon: 'reco-suggestion' },
             { 
                 text: '关于', 

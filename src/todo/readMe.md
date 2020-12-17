@@ -27,6 +27,10 @@ elementUI的table组件，每次都要写大量的HTML，而我个人更喜欢�
 
 ### js原型链
 
+### js this
+
+### vue2结合typescript
+
 
 ## 其他
 
