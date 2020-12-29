@@ -246,4 +246,4 @@ export default ({
 
 最后，看一下效果
 
-![自定义排序效果](/myBlog/images/antdTableTitleSort/show.gif)
+![自定义排序效果](/images/antdTableTitleSort/show.gif)

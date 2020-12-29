@@ -13,7 +13,7 @@ grid布局出了也好些时间了，但是之前为了兼容IE，一直都没�
 
 grid类似table，但是更简单，也更灵活。当页面布局是多行多列的时候使用grid更方便，而且HTML结构也会更简单。比如经常要用到的form表单:
 
-![form](/myBlog/images/cssGrid/form.png)
+![form](/images/cssGrid/form.png)
 
 这样的表单布局很常见，也有很多种实现方式，那么来看下用grid怎么实现吧：
 
@@ -40,7 +40,7 @@ form{
 
 是不是很简洁呢，那么接下来就介绍一些grid的概念吧。先上图：
 
-![grid](/myBlog/images/cssGrid/grid.jpg)
+![grid](/images/cssGrid/grid.jpg)
 
 grid的关键概念如图所示：
 
@@ -148,7 +148,7 @@ column-gap: 30px;
 
 更直观请看：
 
-![对齐属性](/myBlog/images/cssGrid/对齐.png)
+![对齐属性](/images/cssGrid/对齐.png)
 
 > 实际是针对所有单元格的，图中只是展示一下，画的不咋地，意思一下。
 

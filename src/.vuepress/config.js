@@ -1,5 +1,5 @@
 module.exports = {
-    base: '/myBlog/',
+    // base: '/',
     title: '伊水河的博客',
     dest: './docs',
     description: 'SO FAR SO GOOD',
@@ -40,14 +40,6 @@ module.exports = {
         subSidebar: 'auto',
         authorAvatar: '/b.jpg',
         nav: [
-            { 
-                text: '切换', 
-                icon: 'reco-blog',
-                items: [
-                    { text: '码云', link: 'https://yishuihe.gitee.io/myblog', target:'_self', icon: 'reco-mayun' },
-                    { text: 'github', link: 'https://lixiang89.github.io/myBlog/', target:'_self', icon: 'reco-github' },
-                ] 
-            },
             { text: '前端', link: '/categories/前端/', icon: 'reco-blog' },
             { text: '笔记', link: '/note/', icon: 'reco-suggestion' },
             // { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
@@ -56,6 +48,7 @@ module.exports = {
                 text: '关于', 
                 icon: 'reco-account',
                 items: [
+                    { text: '码云', link: 'https://yishuihe.gitee.io', target:'_self', icon: 'reco-mayun' },
                     { text: '掘金', link: 'https://juejin.cn/user/571401777456621', icon: 'reco-juejin' },
                     { text: 'github', link: 'https://github.com/lixiang89', icon: 'reco-github' },
                 ] 

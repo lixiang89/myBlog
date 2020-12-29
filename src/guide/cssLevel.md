@@ -12,7 +12,7 @@ tags:
 
 最近在项目中使用antd的级联组件时，发现选择完选项后，文本框中并没有出现东西，但是呢`placeholder`不见了，并且鼠标悬浮到文本框上时最右侧的`x`却显示了。这说明值是有了的，只是没显示在页面上，于是乎`f12`审查元素，发现确实有东西了，如图：
 
-![有值却没显示](/myBlog/images/cssLevel/有值不显示.png)
+![有值却没显示](/images/cssLevel/有值不显示.png)
 
 于是逐个审查，发现作为第二个元素的`input`被设置了定位导致的，遂有此文，重新学习并记录。
 
@@ -78,7 +78,7 @@ tags:
 
 效果如图：
 
-![常见元素层级](/myBlog/images/cssLevel/常见元素层级.png)
+![常见元素层级](/images/cssLevel/常见元素层级.png)
 
 可以看到各个元素覆盖情况从下到上依次是：`block->float->inline(-block)->position`。
 
@@ -101,7 +101,7 @@ tags:
 <div class="position">position</div>
 ```
 
-![同等级元素](/myBlog/images/cssLevel/同等级元素.png)
+![同等级元素](/images/cssLevel/同等级元素.png)
 
 可以看到，同等级的元素是根据在HTML中的位置而后来居上的。
 
@@ -109,7 +109,7 @@ tags:
 
 除了默认的层级顺序外，还可以使用`z-index`属性来改变元素的层级顺序。给位于上方position2元素添加`z-index:1`，并在最后新增一个position3且设置`z-index:-1`来观察元素层级的变化。
 
-![z-index属性的影响](/myBlog/images/cssLevel/z-index属性的影响.png)
+![z-index属性的影响](/images/cssLevel/z-index属性的影响.png)
 
 可以看到，`-1`的元素层级是低于block元素的，而`1`的元素覆盖在了未设置`z-index`的元素之上。由此，层级从下到上应该是`position的z-index负值->block->float->inline(-block)->positon未设置z-index->position的z-index正值`。如果在其他元素上添加`z-index`属性会发生什么呢？事实上并没有什么效果，其他几种元素依然如上图所示，待在原来的层级一动不动。
 
@@ -163,7 +163,7 @@ tags:
 </div>
 ```
 
-![flexbox的z-index](/myBlog/images/cssLevel/flexbox的z-index.png)
+![flexbox的z-index](/images/cssLevel/flexbox的z-index.png)
 
 可以看到确实是按照`z-index`从小到大的顺序依次叠加。
 
@@ -175,7 +175,7 @@ tags:
 
 最后附上一张经典的css层级图：
 
-![css层级](/myBlog/images/cssLevel/经典层级图.jpg)
+![css层级](/images/cssLevel/经典层级图.jpg)
 
 ## 后记
 

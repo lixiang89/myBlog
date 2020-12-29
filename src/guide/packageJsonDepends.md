@@ -9,7 +9,7 @@ tags:
 
 最近几天上传了个npm包，自己`install`之后发现其所在`node_module`下的目录结构中也包含了一个`node_module`文件夹，如图：
 
-![node_module文件夹下也有node_module](/myBlog/images/packageJsonDepends/1.png)
+![node_module文件夹下也有node_module](/images/packageJsonDepends/1.png)
 
 为什么会这样呢，来试试我们常用的几个依赖
 
@@ -29,7 +29,7 @@ tags:
 
 这就造成了多版本共存:
 
-![两个版本的mobx](/myBlog/images/packageJsonDepends/4.png)
+![两个版本的mobx](/images/packageJsonDepends/4.png)
 
 > 可以先看下面的`devDependencies`，最后再来看此处
 
@@ -72,7 +72,7 @@ tags:
 
 `peerDependencies`声明了自己开发的包的依赖，在安装包时并不会强制安装依赖，只是检查`node_module`文件夹下是否已有所依赖的包及版本是否匹配。如上所示，在安装这样一个包时，如果项目中没有安装mobx或安装的版本不对，则会给出提示：
 
-![不匹配提示](/myBlog/images/packageJsonDepends/3.png)
+![不匹配提示](/images/packageJsonDepends/3.png)
 
 当然也可以指定多个版本，只要安装在指定的版本范围内即可
 
