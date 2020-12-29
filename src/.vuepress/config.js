@@ -28,6 +28,11 @@ module.exports = {
                 '5',
                 '6',
                 '7',
+                '8',
+                '9',
+                '10',
+                '11',
+                '12',
             ],
         },
         sidebarDepth: 2,
@@ -74,7 +79,9 @@ module.exports = {
             tip: {
                 content: "复制成功!"
             }
-        }]
-          
+        }],
+        // ["./auto.js", {
+        //     a:1
+        // }],
     ]
 }
