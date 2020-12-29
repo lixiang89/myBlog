@@ -43,13 +43,13 @@ module.exports = {
             { text: '前端', link: '/categories/前端/', icon: 'reco-blog' },
             { text: '笔记', link: '/note/', icon: 'reco-suggestion' },
             // { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
-            { text: 'TODO', link: '/todo/', icon: 'reco-suggestion' },
+            { text: 'TODO', link: '/todo/', icon: 'reco-document' },
             { 
                 text: '关于', 
                 icon: 'reco-account',
                 items: [
-                    { text: '码云', link: 'https://yishuihe.gitee.io', target:'_self', icon: 'reco-mayun' },
                     { text: '掘金', link: 'https://juejin.cn/user/571401777456621', icon: 'reco-juejin' },
+                    { text: '码云', link: 'https://yishuihe.gitee.io', icon: 'reco-mayun' },
                     { text: 'github', link: 'https://github.com/lixiang89', icon: 'reco-github' },
                 ] 
             },

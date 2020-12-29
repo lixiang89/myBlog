@@ -209,7 +209,7 @@ const store=new Store()
 autorun(() => console.log(store.order));
 ```
 
-上面代码当order变化时，便会触发传入autorun的函数，打印出新的order。因为autorun的函数入参中用到了order（store.or）
+上面代码当order变化时，便会触发传入autorun的函数，打印出新的order。因为autorun的函数入参中用到了order（store.order）
 
 > 想要深入了解mobx会对哪些数据做出响应，可以参考：[MobX 会对什么作出反应?](https://cn.mobx.js.org/best/react.html)
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .con{
+            width: 500px;
+            height: 300px;
+            display: grid;
+            /* grid-template-columns: [c1] 100px [c2] 1fr [c3] 2fr [c4];
+            grid-template-rows: repeat(3,1fr); */
+            grid-template-columns: repeat(3,100px);
+            grid-template-rows: repeat(3,50px);
+            gap: 10px 30px;
+        }
+        .d1{
+            /* grid-column-start: c2;
+            grid-column-end: c4; */
+            background: aquamarine;
+        }
+        .d2{
+            background: bisque
+        }
+        .d3{
+            /* grid-row-start: 1;
+            grid-row-end: 3; */
+            background: brown;
+        }
+        .d4{
+            background: cornflowerblue;
+        }
+        .d5{
+            background: darkgreen;
+        }
+        .d6{
+            background: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="d1">d1</div>
+        <div class="d2">d2</div>
+        <div class="d3">d3</div>
+        <div class="d4">d4</div>
+        <div class="d5">d5</div>
+        <div class="d6">d6</div>
+    </div>
+</body>
+</html>
