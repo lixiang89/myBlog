@@ -10,3 +10,8 @@ bgImageStyle: {
     boxShadow: 'inset 0px 0px 20px 20px'
 }
 ---
+
+<!-- <Meting server="tencent"
+        type="playlist"
+        mid="3237902067"
+        :lrc-type="3"/> -->
