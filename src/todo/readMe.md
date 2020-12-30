@@ -20,7 +20,7 @@ elementUI的table组件，每次都要写大量的HTML，而我个人更喜欢�
 
 发布了几个npm，记录一下过程。包含github actions发布
 
-### css grid布局
+### [√] css grid布局 
 
 ### 根据配置生成antd表单
 同table
@@ -34,5 +34,5 @@ elementUI的table组件，每次都要写大量的HTML，而我个人更喜欢�
 
 ## 其他
 
-### 有空自己写个复制代码的vuepress插件
+### 写个vuepress插件
 
