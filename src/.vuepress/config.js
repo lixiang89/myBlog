@@ -81,8 +81,14 @@ module.exports = {
                 mid: '3237902067',
             },
             aplayer: {
+                order: 'random',
                 lrcType: 3,
+                listFolded: true
             },
+            mobile:{
+                cover:false,
+                lrc:false
+            }
         }],
         // ["@vuepress-reco/vuepress-plugin-bgm-player", {
         //     audios: [

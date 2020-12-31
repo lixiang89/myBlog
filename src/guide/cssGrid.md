@@ -382,6 +382,8 @@ grid-template:
 grid-template:[ca] 50px [cz]/1fr 2fr 3fr;
 ```
 
+前面的问题——`1fr 2fr 3fr`也给出答案了 :) 
+
 ## grid-auto-columns(rows)
 
 前面的grid都是完美刚好的存在于容器中，但是实际情况子项也会出现超出容器的时候。超出的部分所在区域称为隐式网格。可以使用`grid-auto-columns(rows)`来定义他们的宽高。那么，什么时候会超出呢？当子项没有再定义的网格或区域范围内时，就会产生隐式网格，如：子项多于画的网格线；指定了一个没有命名的区域；`grid-column-start`设置超出等等。
@@ -442,7 +444,7 @@ grid-template:[ca] 50px [cz]/1fr 2fr 3fr;
 
 ![flow](/images/cssGrid/flow.gif)
 
-这里就不上代码了（其实图中已有，前面的问题——`1fr 2fr 3fr`也给答案了 :) ）。
+这里就不上代码了（其实图中已有）。
 
 ## grid
 

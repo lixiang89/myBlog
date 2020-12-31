@@ -1,7 +1,47 @@
 html.dark{
+    img,.hero{
+        opacity 0.7
+    }
     .content__default code {
         color: rgb(62 175 124);
         background-color: #282c34;
+    }
+    .aplayer{
+        background-color: var(--background-color);
+        &-body{
+            background-color: transparent !important;
+        }
+        &-list {
+            border-color: var(--background-color) !important;
+            li{
+                border-color: #333333 !important;
+                &:hover{
+                    background-color: inherit;
+                    *{
+                        color:#3eaf7c !important
+                    }
+                }
+            }
+            &-light{
+                background-color: #074026 !important;
+                *{
+                    color:#3eaf7c !important
+                }
+            }
+            &-title{
+                color: var(--text-color);
+            }
+        }
+        &-miniswitcher,&-info{
+            box-shadow: var(--box-shadow) !important;
+            border:none !important;
+            background-color: var(--background-color);
+        }
+        &-icon:hover{
+            path{
+                fill:#3eaf7c !important;
+            }
+        }
     }
 }
 .page h3{
