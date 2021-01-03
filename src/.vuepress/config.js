@@ -20,6 +20,12 @@ module.exports = {
         ['link', { rel: 'icon', href: '/logo.png' }]
     ],
     themeConfig: {
+        valineConfig: {
+            appId: 'uFjsGQeYLGC021IlWTgynom4-gzGzoHsz',// your appId
+            appKey: 'jG4z1pFyqKUCEl1RLkWL2fgO', // your appKey
+            placeholder: '欢迎留言',
+            avatar: 'wavatar'
+        },
         sidebar: {
             '/note/professionalJavascript4/':[
                 '2',
