@@ -28,6 +28,7 @@ module.exports = {
         },
         sidebar: {
             '/note/professionalJavascript4/':[
+                '',
                 '2',
                 '3',
                 '4',
@@ -48,7 +49,7 @@ module.exports = {
         nav: [
             // { text: '前端', link: '/categories/前端/', icon: 'reco-blog' },
             // { text: '力扣', link: '/categories/力扣/', icon: 'reco-coding' },
-            // { text: '笔记', link: '/note/', icon: 'reco-suggestion' },
+            { text: '笔记', link: '/note/', icon: 'reco-suggestion' },
             // { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
             { text: 'TODO', link: '/todo/', icon: 'reco-document' },
             { 
