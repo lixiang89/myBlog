@@ -17,9 +17,12 @@ module.exports = {
                 content:'width=device-width,initial-scale=1,user-scalable=no'
             }
         ],
-        ['link', { rel: 'icon', href: '/logo.png' }]
+        ['link', { rel: 'icon', href: '/logo.png' }],
+        // ["script", { src: "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js" }],
+        // ["script", { defer:true,id:"myhk",key:"demo",m:"1",src: "https://myhkw.cn/player/js/player.js" }]
     ],
     themeConfig: {
+        startYear:'2020',
         valineConfig: {
             appId: 'uFjsGQeYLGC021IlWTgynom4-gzGzoHsz',// your appId
             appKey: 'jG4z1pFyqKUCEl1RLkWL2fgO', // your appKey
@@ -85,9 +88,13 @@ module.exports = {
         }],
         ['meting',{
             meting: {
-                server: 'tencent',
+                // server: 'tencent',
+                // type: 'playlist',
+                // mid: '3237902067',
+                server: 'netease',
                 type: 'playlist',
-                mid: '3237902067',
+                mid: '3778678',
+                // auto: 'https://y.qq.com/n/yqq/toplist/26.html'
             },
             aplayer: {
                 order: 'random',
@@ -99,6 +106,10 @@ module.exports = {
                 lrc:false
             }
         }],
+        ['seo'],
+        ['sitemap',{
+            hostname: 'https://yihe.cool'
+        }]
         // ["@vuepress-reco/vuepress-plugin-bgm-player", {
         //     audios: [
         //         {
