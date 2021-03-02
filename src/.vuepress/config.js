@@ -43,7 +43,20 @@ module.exports = {
                 '10',
                 '11',
                 '12',
+                '13',
+                '14',
+                '17',
+                '18',
+                '19',
+                '24',
+                '25',
+                '26',
+                '27'
             ],
+            '/note/typescriptEntry/':[
+                '',
+                'enum'
+            ]
         },
         sidebarDepth: 2,
         type: 'blog',
@@ -55,7 +68,7 @@ module.exports = {
             // { text: '前端', link: '/guide/', icon: 'reco-blog' },
             // { text: '力扣', link: '/leetcode/', icon: 'reco-coding' },
             { text: '笔记', link: '/note/', icon: 'reco-suggestion' },
-            // { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
+            { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
             { text: 'TODO', link: '/todo/', icon: 'reco-document' },
             { 
                 text: '关于', 
@@ -106,7 +119,13 @@ module.exports = {
                 lrc:false
             }
         }],
-        ['seo'],
+        // ['seo'],
+        ['autometa',{
+            author: {
+              name   : '伊水河',
+            },
+            canonical_base: 'https://yihe.cool',
+        }],
         ['sitemap',{
             hostname: 'https://yihe.cool'
         }]
