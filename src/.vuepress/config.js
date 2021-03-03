@@ -68,7 +68,7 @@ module.exports = {
             // { text: '前端', link: '/guide/', icon: 'reco-blog' },
             // { text: '力扣', link: '/leetcode/', icon: 'reco-coding' },
             { text: '笔记', link: '/note/', icon: 'reco-suggestion' },
-            { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
+            // { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
             { text: 'TODO', link: '/todo/', icon: 'reco-document' },
             { 
                 text: '关于', 
@@ -76,7 +76,8 @@ module.exports = {
                 items: [
                     { text: '掘金', link: 'https://juejin.cn/user/571401777456621', icon: 'reco-juejin' },
                     { text: '码云', link: 'https://yishuihe.gitee.io', icon: 'reco-mayun' },
-                    // { text: 'github', link: 'https://github.com/lixiang89', icon: 'reco-github' },
+                    { text: 'github', link: 'https://github.com/lixiang89', icon: 'reco-github' },
+                    { text: '全民K歌', link: 'https://node.kg.qq.com/personal?uid=659d9d802d253e8231', icon: '' },
                 ] 
             },
         ],

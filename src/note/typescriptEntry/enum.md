@@ -1,11 +1,10 @@
 ---
 title: 枚举
-date: 2020-03-01 21:20:20
-# categories:
-#  - 笔记
+date: 2021-03-01 21:20:20
+categories:
+ - 读书
 tags:
- - typescript
-#  - js
+ - typescript入门与实战
 ---
 
 ## 枚举
