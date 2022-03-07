@@ -23,12 +23,12 @@ module.exports = {
     ],
     themeConfig: {
         startYear:'2020',
-        valineConfig: {
-            appId: 'uFjsGQeYLGC021IlWTgynom4-gzGzoHsz',// your appId
-            appKey: 'jG4z1pFyqKUCEl1RLkWL2fgO', // your appKey
-            placeholder: '欢迎留言',
-            avatar: 'wavatar'
-        },
+        // valineConfig: {
+        //     appId: 'uFjsGQeYLGC021IlWTgynom4-gzGzoHsz',// your appId
+        //     appKey: 'jG4z1pFyqKUCEl1RLkWL2fgO', // your appKey
+        //     placeholder: '欢迎留言',
+        //     avatar: 'wavatar'
+        // },
         sidebar: {
             '/note/professionalJavascript4/':[
                 '',
@@ -121,15 +121,15 @@ module.exports = {
             }
         }],
         // ['seo'],
-        ['autometa',{
-            author: {
-              name   : '伊水河',
-            },
-            canonical_base: 'https://yihe.cool',
-        }],
-        ['sitemap',{
-            hostname: 'https://yihe.cool'
-        }]
+        // ['autometa',{
+        //     author: {
+        //       name   : '伊水河',
+        //     },
+        //     canonical_base: 'https://yihe.cool',
+        // }],
+        // ['sitemap',{
+        //     hostname: 'https://yihe.cool'
+        // }]
         // ["@vuepress-reco/vuepress-plugin-bgm-player", {
         //     audios: [
         //         {

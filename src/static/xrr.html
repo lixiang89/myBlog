@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雪容融</title>
+    <style>
+        .xrr{
+            position: relative;
+            height: 217px;
+            width: 150px;
+        }
+        .head{
+            width: 150px;
+            height: 130px;
+            background: #d23131;
+            border-radius: 50%;
+            transform: rotate(12deg);
+            position: relative;
+            top: 36px;
+        }
+        .neck{
+            position: absolute;
+            z-index: 9;
+        }
+        .neck::before{
+            content: '';
+            display: block;
+            width: 75px;
+            height: 8px;
+            background: gold;
+            position: absolute;
+            top: 19px;
+            left: 45px;
+            border: 1px solid #e8a20b;
+        }
+        .neck::after{
+            content: '';
+            display: block;
+            width: 8px;
+            height: 23px;
+            background: gold;
+            transform: rotate(11deg);
+            position: relative;
+            top: 19px;
+            left: 42px;
+            border: 1px solid #e8a20b;
+        }
+        .body{
+            height: 52px;
+            width: 67px;
+            background: #d23131;
+            border-radius: 25%;
+            position: relative;
+            top: 23px;
+            left: 42px;
+        }
+        .face{
+            width: 110px;
+            height: 65px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            left: 7px;
+            top: 36px;
+        }
+        .eye{
+            height: 10px;
+            width: 7px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .eye.left{
+            top: 28px;
+            left: 20px;
+        }
+        .eye.right{
+            right: 34px;
+            top: 30px;
+        }
+        .eyeball{
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            position: relative;
+            left: 0.5px;
+            top: 3px;
+            box-shadow: inset 0 0 5px gold;
+        }
+        .belly{
+            width: 35px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            position: relative;
+            left: 15px;
+            top: 6px;
+        }
+        .arm{
+            width: 35px;
+            height: 22px;
+            background: #d23131;
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: 0 0 1px darkred;
+        }
+        .arm.left{
+            left: 16px;
+            bottom: 53px;
+            transform: rotate(28deg);
+            border-radius: 45% 0 0 50% 
+        }
+        .arm.right{
+            bottom: 41px;
+            right: 14px;
+            transform: rotate(79deg);
+            border-radius: 50% 45% 19% 0;
+            z-index: 99;
+        }
+        .foot{
+            width: 27px;
+            height: 15px;
+            background: #d23131;
+            position: absolute;
+            bottom: 0;
+            border-radius: 0 0 27% 27%;
+        }
+        .foot.left{
+            left: 47px;
+        }
+        .foot.right{
+            right: 47px;
+        }
+        .foot .line{
+            border-bottom: 2px dashed gold;
+            position: absolute;
+            width: 100%;
+            bottom: 6px;
+        }
+        .red{
+            width: 10px;
+    height: 10px;
+    box-shadow: 0 0 14px red;
+    background: rgba(255,0,0,.2);
+    border-radius: 50%;
+    position: absolute;
+    top: 76px;
+    left: 13px;
+        }
+.red.right {
+    left: 109px;
+    top: 66px;
+}
+        .l1{
+            width: 25px;
+            height: 21px;
+            position: absolute;
+            top: 73px;
+            left: 5px;
+            border-radius: 50%;
+            background: white;
+            transform: rotate(50deg);
+        }
+        .l2{
+            width: 23px;
+    height: 16px;
+    position: absolute;
+    top: 57px;
+    left: 1px;
+    border-radius: 50%;
+    background: white;
+    transform: rotate(110deg);
+        }
+        .l3{
+            width: 32px;
+    height: 15px;
+    position: absolute;
+    top: 38px;
+    left: 13px;
+    border-radius: 50%;
+    background: white;
+    transform: rotate(155deg);
+        }
+        .l4{
+            width: 32px;
+    height: 25px;
+    position: absolute;
+    top: 30px;
+    left: 38px;
+    border-radius: 50%;
+    background: white;
+    transform: rotate(172deg);
+        }
+        .l5{
+            width: 32px;
+    height: 20px;
+    position: absolute;
+    top: 24px;
+    left: 64px;
+    border-radius: 50%;
+    background: #d23131;
+    transform: rotate(114deg);
+        }
+        .l6{
+            width: 33px;
+    height: 23px;
+    position: absolute;
+    top: 40px;
+    left: 83px;
+    border-radius: 50%;
+    background: white;
+    transform: rotate(34deg);
+        }
+        .l7{
+            width: 32px;
+    height: 22px;
+    position: absolute;
+    top: 59px;
+    left: 97px;
+    border-radius: 50%;
+    background: white;
+    transform: rotate(203deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="xrr">
+        <div class="hat"></div>
+        <div class="head">
+            <div class="face">
+                <div class="eye left">
+                    <div class="eyeball"></div>
+                </div>
+                <div class="eye right">
+                    <div class="eyeball"></div>
+                </div>
+                <!-- <div class="red"></div> -->
+            </div>
+            <div class="l1"></div>
+            <div class="l2"></div>
+            <div class="l3"></div>
+            <div class="l4"></div>
+            <div class="l5"></div>
+            <div class="l6"></div>
+            <div class="l7"></div>
+            <div class="red"></div>
+            <div class="red right"></div>
+        </div>
+        <div class="neck"></div>
+        <div class="body">
+            <div class="belly"></div>
+        </div>
+        <div class="arm left"></div>
+        <div class="arm right"></div>
+        <div class="foot left">
+            <div class="line"></div>
+        </div>
+        <div class="foot right">
+            <div class="line"></div>
+        </div>
+    </div>
+</body>
+</html>
