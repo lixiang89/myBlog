@@ -1,5 +1,5 @@
 module.exports = {
-    // base: '/',
+    base: '/myBlog/',
     title: '伊水河的博客',
     dest: './docs',
     description: 'SO FAR SO GOOD',
