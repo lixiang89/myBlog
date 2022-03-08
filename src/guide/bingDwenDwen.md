@@ -11,7 +11,7 @@ tags:
 
 首先来看一下冰墩墩的图片，分析一下如何下手。
 
-![冰墩墩雪容融](/images/bingDwenDwen/bddxrr.jpg)
+![冰墩墩雪容融](@images/bingDwenDwen/bddxrr.jpg)
 
 嗯~~~，头身一体，没有脖子！脸部外围几层彩带，俩黑眼圈的大眼睛，一鼻一嘴，俩耳朵，俩手臂，俩脚脚。emm，废话有点多，没事，接下来就按照上面的肢解来一步一步画出来吧。
 
@@ -237,7 +237,7 @@ ear.left{
 
 - 不了解的可以看下图
 
-![border](/images/bingDwenDwen/border.png)
+![border](@images/bingDwenDwen/border.png)
 
 ### 嘴
 
@@ -339,7 +339,7 @@ ear.left{
 
 仔细看右手是有一个爱心的。怎么画呢，想象一下，方形，一端给圆形弧度，一端不给。是不是就是一个水滴。水滴圆弧一方再用一个方形一角嵌入遮盖，形成心形的上半部缺口。
 
-![心](/images/bingDwenDwen/heart.gif)
+![心](@images/bingDwenDwen/heart.gif)
 
 基本完成了。这里也可以利用伪元素。
 
@@ -393,10 +393,10 @@ ear.left{
 
 好了，完成！
 
-![冰墩墩](/images/bingDwenDwen/bdd.gif)
+![冰墩墩](@images/bingDwenDwen/bdd.gif)
 
 外壳，什么外壳，丢了！
 
 对了，还有丢了帽子的雪容融。
 
-![雪容融](/images/bingDwenDwen/xrr.png)
+![雪容融](@images/bingDwenDwen/xrr.png)

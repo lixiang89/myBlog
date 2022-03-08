@@ -42,7 +42,7 @@ tags:
 
 此时，页面的样子是：
 
-![初始容器](/images/flex/初始容器.png)
+![初始容器](@images/flex/init.png)
 
 然后，我们将.flex的display设置为flex，
 
@@ -54,7 +54,7 @@ tags:
 
 页面变为
 
-![初始容器](/images/flex/flex容器.png)
+![初始容器](@images/flex/flex.png)
 
 为什么会这样呢？其实是当元素被设置为flex容器时，会有一些默认的属性和值生效。其中导致子`div`——`.item`,也可称他们为flex元素，变成横向排列的的属性时`flex-direction`。他的默认值是`row`，即横向排列。既然说到这里了，那么接下来就介绍他吧。
 
@@ -75,7 +75,7 @@ flex-direction有四个值，分别是：
 
 下面是四种值的对应表现：
 
-![direction](/images/flex/direction.gif)
+![direction](@images/flex/direction.gif)
 
 flex容器的默认值除了`flex-direction:row`之外，还有：
 
@@ -100,7 +100,7 @@ flex-shrink可以定义元素的缩小规则，值为非负整数，默认值为
 
 效果如图：
 
-![shrink](/images/flex/shrink1.gif)
+![shrink](@images/flex/shrink1.gif)
 
 可以看到，所有元素立马缩小了，宽度依然保持相等。因为所有元素的`flex-shrink`的值都是默认值1，所以他们缩小的比例也是相同的。如果更改其中某个元素的值呢？
 
@@ -115,7 +115,7 @@ flex-shrink可以定义元素的缩小规则，值为非负整数，默认值为
 
 为了方便计算，我们先去除`border`，来看一下吧：
 
-![shrink2](/images/flex/shrink2.gif)
+![shrink2](@images/flex/shrink2.gif)
 
 可以看到`i1`的宽度为50，`i2`为25，其他均为75，这是怎么算出来的呢。原始元素总长度为`100*9=900`，现在容器长度为600。相差300。缩小的范围就在相差的300px之中，具体计算规则为：300除以总shrink的和值。上面为`2+3+1*7`，其他7个为默认值1。300除以12等于25。再用元素的初始宽度减去（shrink的值乘以25），所以`i1`的宽度为 `100-25*2=50`,同理`i2`为`100-25*3=25`。总结后为：
 
@@ -146,13 +146,13 @@ flex-shrink可以定义元素的缩小规则，值为非负整数，默认值为
 
 总宽度1200，原始宽度900，多出300，分成`2+3=5`份，每份60px，所以`i1`的最终宽度为`100+60*2=220`，`i2`为`100+60*3=280`
 
-![grow](/images/flex/grow.png)
+![grow](@images/flex/grow.png)
 
 ## flex-basis
 
 `flex-basis`可以设置元素在主轴方向上的大小。如`flex-direction`值为`row[-reverse]`，相当于`width`。`column[-reverse]`相当于`height`。当`flex-basis`（非`auto`）和`width`、`height`同时存在时，`flex-basis`的优先级更高。值为`auto`时则会使用`width`、`height`。上面例子都是默认值`auto`，这里就不赘述了。
 
-![basis](/images/flex/basis.png)
+![basis](@images/flex/basis.png)
 
 当`flex-basis`值为0时，元素会保留其能显示最小宽度，其余空间均为剩余空间，可用于`flex-grow`或`flex-shrink`计算。
 
@@ -176,7 +176,7 @@ flex-shrink可以定义元素的缩小规则，值为非负整数，默认值为
 }
 ```
 
-![wrap](/images/flex/wrap.gif)
+![wrap](@images/flex/wrap.gif)
 
 ## flex-flow
 
@@ -206,7 +206,7 @@ flex-shrink可以定义元素的缩小规则，值为非负整数，默认值为
 
 效果如图：
 
-![order](/images/flex/order.png)
+![order](@images/flex/order.png)
 
 ## gap
 
@@ -220,7 +220,7 @@ flex-shrink可以定义元素的缩小规则，值为非负整数，默认值为
 
 效果如图：
 
-![gap](/images/flex/gap.png)
+![gap](@images/flex/gap.png)
 
 ## justify-content
 
@@ -244,13 +244,13 @@ flex-shrink可以定义元素的缩小规则，值为非负整数，默认值为
 
 `stretch`的效果可以将flex容器的高度设置为`100px`，此时可以看到元素的高度填满整个高度。但是元素如果设置有自己的大小限制的话，则不会拉伸。
 
-![stretch](/images/flex/stretch.png)
+![stretch](@images/flex/stretch.png)
 
 ## align-content
 
 当有多行时，用于设置多行相对于容器的对齐方式，其值包含了上述`justify-content`和`align-items`的所有值。效果也是一样的，来浏览一下吧
 
-![alignContent](/images/flex/alignContent.gif)
+![alignContent](@images/flex/alignContent.gif)
 
 ## align-self
 
@@ -258,7 +258,7 @@ flex-shrink可以定义元素的缩小规则，值为非负整数，默认值为
 
 将容器`align-items`设置为`center`，`i1`的`align-self`设置为`flex-start`。效果如下：
 
-![self](/images/flex/self.png)
+![self](@images/flex/self.png)
 
 > 经测，当多行时，`align-content`拥有高优先级，`align-self`不能覆盖其值。
 

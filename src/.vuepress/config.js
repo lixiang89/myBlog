@@ -1,8 +1,16 @@
+const path = require('path')
 module.exports = {
     base: '/myBlog/',
     title: '伊水河的博客',
     dest: './docs',
     description: 'SO FAR SO GOOD',
+    configureWebpack: {
+        resolve: {
+          alias: {
+            '@images': path.resolve(__dirname,'public/images'),
+          }
+        }
+    },
     locales: {
         '/':{
             lang:'zh-CN'
