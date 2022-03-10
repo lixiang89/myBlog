@@ -63,8 +63,17 @@ module.exports = {
             ],
             '/note/typescriptEntry/':[
                 '',
-                'enum'
-            ]
+                'enum',
+                'type'
+            ],
+            '/note/jsDSA/':[
+                '',
+                'overview',
+                'stack',
+                'linkList',
+                'linkList2',
+                'tree'
+            ],
         },
         sidebarDepth: 2,
         type: 'blog',
@@ -77,7 +86,7 @@ module.exports = {
             // { text: '力扣', link: '/leetcode/', icon: 'reco-coding' },
             { text: '笔记', link: '/note/', icon: 'reco-suggestion' },
             // { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
-            { text: 'TODO', link: '/todo/', icon: 'reco-document' },
+            // { text: 'TODO', link: '/todo/', icon: 'reco-document' },
             { 
                 text: '关于', 
                 icon: 'reco-account',

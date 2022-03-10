@@ -7,4 +7,4 @@ tags:
  - typescript入门与实战
 ---
 
-重新学习typescript，否则vue3源码都要看不懂了。
+学习typescript
