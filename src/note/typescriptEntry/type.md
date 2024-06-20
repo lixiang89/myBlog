@@ -5,6 +5,8 @@ categories:
  - 读书
 tags:
  - typescript入门与实战
+ - typescript
+ - ts
 ---
 
 ### 数组类型
